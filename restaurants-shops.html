@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants & Shops in Al-Baha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Landmarks in Al-Baha</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="landmarks.html">Landmarks</a></li>
+            <li><a href="restaurants-shops.html">Restaurants & Shops</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <div class="content">
+        <h1>Restaurants & Shops in Al-Baha</h1>
+
+        <div class="restaurant">
+            <h2>Mandi Al-Jabal</h2>
+            <img src="mandi-restaurant.jpeg" alt="Mandi Al-Jabal">
+            <button onclick="toggleDetails('mandi')">Show Details</button>
+            <p id="mandi" class="hidden">Mandi Al-Jabal offers Mandi, a traditional dish that originated in the Hadramout region of Yemen. It later spread to the Tihama areas in the Kingdom of Saudi Arabia. The dish primarily consists of meat and rice, blended with a mix of spices,
+                and is cooked in an underground pit. Mandi is widely consumed across most regions of the Arabian Peninsula. This restaurant enjoys widespread popularity in the Al-Baha region.</p>
+        </div>
+
+        <div class="restaurant">
+            <h2>Sama Al-Nawras Restaurant</h2>
+            <img src="seafood-restaurant.jpeg" alt="Sama Al-Nawras">
+            <button onclick="toggleDetails('seafood')">Show Details</button>
+            <p id="seafood" class="hidden">Sama Al-Nawras Restaurant offers a variety of fresh grilled and fried fish, caught daily from the Red Sea and prepared by skilled hands specializing in seafood cuisine. This restaurant is widely known and popular in the Tihama region of Al-Baha.</p>
+        </div>
+
+        <div class="shop">
+            <h2>Thursday Market</h2>
+            <img src="thursday-market.jpeg" alt="Thursday Market">
+            <button onclick="toggleDetails('thursday')">Show Details</button>
+            <div id="thursday" class="hidden details">
+                <p id="thursday" class="hidden details">
+                    The Thursday Market in Al-Baha is one of the most important and famous markets in the region. It features several sections catering to various needs, such as:
+                    <ul>
+                        <li><b>Poultry Market:</b> Offering various domestic birds including chickens, pigeons, calves, and wild rabbits.</li>
+                        <li><b>Crops Market:</b> Selling locally grown fruits and vegetables like pomegranates, apricots, pears, grapes, almonds, and corn.</li>
+                        <li><b>Clothing and Gifts Market:</b> Shops offering fabrics, jewelry, and gifts including fragrant plants like basil and kadi.</li>
+                        <li><b>Dates and Honey Market:</b> Featuring pure local honey and a variety of dates.</li>
+                        <li><b>Traditional Jewelry Market:</b> Showcasing antique ornaments and accessories.</li>
+                        <li><b>Agricultural Tools and Household Goods Section:</b> Providing farming equipment and home supplies.</li>
+                        <li><b>Traditional Heritage Section:</b> Displaying the region's cultural and historical heritage.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="shop">
+            <h2>Sunday Market</h2>
+            <img src="sunday-market.jpeg" alt="Sunday Market">
+            <button onclick="toggleDetails('sunday')">Show Details</button>
+            <div id="sunday" class="hidden details">
+                The Sunday Market in Raghadan is one of the most famous traditional markets in the Al-Baha region. It has long been a central hub for traders and buyers from across the tribes of Ghamid and Zahran, as well as neighboring areas. The market is divided into
+                two sections: the upper and lower parts, featuring a variety of goods, including grains, fruits, dates, dairy products, raisins, spices, livestock, ghee, honey, fabrics, clothing, firewood, and locally made household and agricultural tools.
+                <br><br> Beyond its economic role, the Sunday Market holds cultural, social, and media significance. It has a deep historical legacy, as mentioned by the Swiss orientalist John Lewis Burckhardt in 1230 AH, who described it as "the official
+                market of Ghamid." Over the past two centuries, the market has witnessed significant military, political, and social events, including the assassination of an Ottoman commander.
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Al-Baha University students</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            var button = document.querySelector(`[onclick="toggleDetails('${id}')"]`);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+                button.textContent = 'Hide Details';
+            } else {
+                element.classList.add('hidden');
+                button.textContent = 'Show Details';
+            }
+        }
+    </script>
+</body>
+
+</html>
